@@ -1,5 +1,5 @@
 /**
- * 页面通用store
+ * 页面通用store，包含一般的loading，如果存在table页面，total和page，pageSize都会放在这里面
  */
 import { observable, action, runInAction } from 'mobx';
 
