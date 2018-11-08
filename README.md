@@ -1,6 +1,17 @@
 # react-base-staging-weather
 **基于create-react-app1.x，基础项目集成搭建，包含路由，其中一个页面仿腾讯天气，基于react方向主流技术栈实现，脚手架create-react-app，全部技术栈：react+mobx+antd+react-router4.x+axios+webpack3.x**
 
+## usage:
+1. `git clone xxxx`
+2. `cd xxx`
+3. `cnpm i or npm i`
+
+## run in dev:
+`npm start` or `yarn start`
+
+## build:
+`npm run build` 
+
 ## 主要技术栈
 - 脚手架create-react-app1.x 
 - react+mobx  
@@ -19,7 +30,7 @@
 3. react相关技术栈入门小伙伴参考，腾讯天气是一个很不错的入门级的页面
 
 ## 项目预览地址
-http://132.232.203.178:8080/
+[这是我的DEMO](http://132.232.203.178:8080/)
 
 
 ## 写在后面
