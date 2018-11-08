@@ -1,0 +1,75 @@
+.main {
+  background: #fff;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.08);
+  padding: 20px 30px 27px;
+  margin: 50px auto 50px;
+  width: 1200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.main::after {
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+}
+
+.title {
+  font-size: 18px;
+  color: #344665;
+  margin-bottom: 22px;
+  float: left;
+}
+
+.title:before {
+  content: '';
+  float: left;
+  height: 7px;
+  width: 7px;
+  overflow: hidden;
+  margin-right: 10px;
+  background: #344665;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+.actions {
+  float: right;
+}
+
+.btnPrev {
+  margin-right: 8px;
+}
+
+.content {
+  clear: both;
+  width: 4800px;
+  transition: margin 1s ease-in-out;
+}
+
+.list {
+  list-style: none;
+}
+
+.listItem {
+  float: left;
+  width: 40px;
+  margin-right: 60px;
+  text-align: center;
+  .itemTime {
+    font-size: 14px;
+    color: #8a9baf;
+    margin-bottom: 24px;
+  }
+  .itemContent {
+    margin-bottom: 8px;
+    width: 30px;
+    height: 30px;
+  }
+  .itemTemperature {
+    font-size: 18px;
+    color: #384c78;
+    line-height: 14px;
+  }
+}

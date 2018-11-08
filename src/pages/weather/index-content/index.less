@@ -1,0 +1,105 @@
+.main {
+  width: 430px;
+  float: right;
+  position: relative;
+}
+
+.title {
+  font-size: 18px;
+  color: #344665;
+  margin-bottom: 22px;
+  float: left;
+}
+
+.title:before {
+  content: '';
+  float: left;
+  height: 7px;
+  width: 7px;
+  overflow: hidden;
+  margin-right: 10px;
+  background: #344665;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+.actions {
+  float: right;
+}
+
+.btnPrev {
+  margin-right: 8px;
+}
+
+.mainContent {
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  width: 440px;
+  margin-left: -5px;
+  padding-top: 32px;
+}
+
+.content {
+  width: 890px;
+  transition: margin 1s ease-in-out;
+}
+
+.indexSummary {
+  font-size: 16px;
+  color: #384c78;
+}
+
+.detailContent {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+  display: table;
+  overflow: hidden;
+}
+
+.detail {
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 13px;
+  color: #384c78;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+}
+
+.living1 {
+  float: left;
+  width: 440px;
+  list-style: none;
+}
+
+.subContent {
+  height: 100%;
+  width: 100%;
+  padding-top: 38px;
+  transition: margin 0.5s ease-in-out;
+}
+
+.liItem {
+  height: 140px;
+  width: 200px;
+  float: left;
+  background-color: #fff;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 10px; // margin-right: 14px;
+}
+
+.liItem:hover {
+  .subContent {
+    height: 100%;
+    width: 100%;
+    padding-top: 38px;
+    transition: margin 0.5s ease-in-out;
+    margin-top: -140px;
+  }
+}
