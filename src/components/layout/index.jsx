@@ -8,11 +8,15 @@ const { Header, Content } = Layout;
 
 class RecordLayout extends Component {
   static propTypes = {
-    children: PropTypes.object
+    children: PropTypes.object,
+    history: PropTypes.object,
+    location: PropTypes.object
   };
 
   static defaultProps = {
-    children: {}
+    children: {},
+    history: {},
+    location: {}
   };
 
   /**

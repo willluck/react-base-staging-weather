@@ -5,13 +5,17 @@
  * 天气 24小时数据内容
  */
 import React, { Component } from 'react';
-import { Icon, Button } from 'antd';
+import { Button } from 'antd';
 import { observer } from 'mobx-react';
-import _ from 'lodash';
+import PropTypes from 'prop-types';
 import styles from './index.less';
 
 @observer
 class HourContent extends Component {
+  static propTypes = {
+    store: PropTypes.object.isRequired
+  };
+
   constructor(props) {
     super(props);
     this.state = {

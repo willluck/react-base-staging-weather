@@ -7,13 +7,17 @@
 import React, { Component } from 'react';
 import { Icon, Input } from 'antd';
 import { observer } from 'mobx-react';
-import _ from 'lodash';
+import PropTypes from 'prop-types';
 import styles from './index.less';
 
 const Search = Input.Search;
 
 @observer
 class WeatherTop extends Component {
+  static propTypes = {
+    store: PropTypes.object.isRequired
+  };
+
   constructor(props) {
     super(props);
     this.state = {};

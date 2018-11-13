@@ -1,6 +1,7 @@
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
+import PropTypes from 'prop-types';
 import Layout from './components/layout';
 // import Diary from './pages/diary';
 // import Mine from './pages/mine';
@@ -74,5 +75,23 @@ const Routes = ({ history }) => (
     </Layout>
   </Router>
 );
+
+MyLoadingComponent.propTypes = {
+  isLoading: PropTypes.bool,
+  error: PropTypes.bool
+};
+
+MyLoadingComponent.defaultProps = {
+  isLoading: true,
+  error: false
+};
+
+Routes.propTypes = {
+  history: PropTypes.object
+};
+
+Routes.defaultProps = {
+  history: {}
+};
 
 export default Routes;

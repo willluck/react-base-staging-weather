@@ -4,16 +4,8 @@
  *
  * 我的内容管理
  */
-import React, { Component } from 'react';
-import { Tree } from 'antd';
-import styles from './index.less';
+import React from 'react';
 
-const TreeNode = Tree.TreeNode;
-
-class Mine extends Component {
-  render() {
-    return <div>mine</div>;
-  }
-}
+const Mine = () => <div>Mine</div>;
 
 export default Mine;

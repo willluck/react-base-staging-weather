@@ -4,13 +4,18 @@
  *
  * 天气 预览当前基本天气数据
  */
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Icon, Tag, Popover } from 'antd';
 import { observer } from 'mobx-react';
+import PropTypes from 'prop-types';
 import styles from './index.less';
 
 @observer
 class WeatherOverview extends Component {
+  static propTypes = {
+    store: PropTypes.object.isRequired
+  };
+
   // 获取api颜色等级
   getAqiColor = aqi => {
     const numAqi = +aqi;
@@ -72,7 +77,9 @@ class WeatherOverview extends Component {
     const { aqi, quality } = aqiDetail || {};
     return (
       <div className={styles.aqiTitle} style={{ color }}>
-        空气质量指数 {aqi} {quality}
+        空气质量指数
+        {aqi}
+        {quality}
       </div>
     );
   };
@@ -120,7 +127,8 @@ class WeatherOverview extends Component {
             <span className={styles.item}>
               <Icon type="rise" theme="outlined" className={styles.icon} />
               <span className={styles.itemText}>
-                {windDirection} {windPower}
+                {windDirection}
+                {windPower}
               </span>
             </span>
             <span className={styles.item}>

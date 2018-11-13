@@ -4,12 +4,8 @@
  *
  * 照片管理
  */
-import React, { Component } from 'react';
+import React from 'react';
 
-class Photograph extends Component {
-  render() {
-    return <div>photograph</div>;
-  }
-}
+const Photograph = () => <div>Photograph</div>;
 
 export default Photograph;

@@ -7,10 +7,15 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import { Icon, Button } from 'antd';
+import PropTypes from 'prop-types';
 import styles from './index.less';
 
 @observer
 class IndexContent extends Component {
+  static propTypes = {
+    store: PropTypes.object.isRequired
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -155,7 +160,7 @@ class IndexContent extends Component {
           <div className={styles.content} style={listStyle}>
             <ul className={styles.living1}>
               {dataFirst.length > 0 &&
-                dataFirst.map((item, indexNum) => (
+                dataFirst.map(item => (
                   <li className={styles.liItem} key={item.title}>
                     <div className={styles.subContent}>
                       <Icon
@@ -164,7 +169,8 @@ class IndexContent extends Component {
                         style={{ fontSize: 32, marginBottom: 12 }}
                       />
                       <p className={styles.indexSummary}>
-                        {item.title} {item.summary}
+                        {item.title}
+                        {item.summary}
                       </p>
                     </div>
                     <div className={styles.detailContent}>
@@ -175,7 +181,7 @@ class IndexContent extends Component {
             </ul>
             <ul className={styles.living1}>
               {dataSecond.length > 0 &&
-                dataSecond.map((item, indexNum) => (
+                dataSecond.map(item => (
                   <li className={styles.liItem} key={item.title}>
                     <div className={styles.subContent}>
                       <Icon
@@ -184,7 +190,8 @@ class IndexContent extends Component {
                         style={{ fontSize: 32, marginBottom: 12 }}
                       />
                       <p className={styles.indexSummary}>
-                        {item.title} {item.summary}
+                        {item.title}
+                        {item.summary}
                       </p>
                     </div>
                     <div className={styles.detailContent}>

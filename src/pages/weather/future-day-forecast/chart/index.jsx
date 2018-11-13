@@ -6,9 +6,14 @@
  */
 import React, { Component } from 'react';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import ReactEcharts from 'echarts-for-react';
 
 class DayForecastChart extends Component {
+  static propTypes = {
+    weathers: PropTypes.object.isRequired
+  };
+
   getOption = () => {
     const option = {
       tooltip: {

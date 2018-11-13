@@ -1,25 +1,22 @@
 /**
  * 最顶层组件
  */
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Routers from './routers';
 
-export default class App extends Component {
-  static propTypes = {
-    history: PropTypes.object
-  };
+const App = ({ history }) => (
+  <div>
+    <Routers history={history} />
+  </div>
+);
 
-  static defaultProps = {
-    history: {}
-  };
+App.propTypes = {
+  history: PropTypes.object
+};
 
-  render() {
-    const { history } = this.props;
-    return (
-      <div>
-        <Routers history={history} />
-      </div>
-    );
-  }
-}
+App.defaultProps = {
+  history: {}
+};
+
+export default App;

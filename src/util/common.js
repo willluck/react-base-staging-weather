@@ -1,5 +1,5 @@
 // 截取当前时间
-const getTime = time => {
+const getTime = (time: String) => {
   const hour = time.slice(-4, -2);
   const min = time.slice(-2);
   if (hour === '00') {
@@ -8,4 +8,4 @@ const getTime = time => {
   return `${hour}:${min}`;
 };
 
-export { getTime };
+export default getTime;

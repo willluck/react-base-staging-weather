@@ -7,11 +7,16 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import Chart from './chart';
 import styles from './index.less';
 
 @observer
 class DayForecast extends Component {
+  static propTypes = {
+    store: PropTypes.object.isRequired
+  };
+
   // 获取当前周几
   getWeek = num => {
     switch (num) {
@@ -66,8 +71,8 @@ class DayForecast extends Component {
                   day,
                   day_weather: dayWeather,
                   night_weather: nightWeather,
-                  day_air_temperature: dayTemperature,
-                  night_air_temperature: nightTemperature,
+                  // day_air_temperature: dayTemperature,
+                  // night_air_temperature: nightTemperature,
                   day_weather_pic: dayPic,
                   night_weather_pic: nightPic,
                   day_wind_direction: windDirection,
@@ -97,7 +102,8 @@ class DayForecast extends Component {
                       <p className={styles.weather}>{nightWeather}</p>
                     </div>
                     <p className={styles.wind}>
-                      {windDirection} {windPower}
+                      {windDirection}
+                      {windPower}
                     </p>
                   </li>
                 );

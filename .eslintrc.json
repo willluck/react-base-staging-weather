@@ -1,22 +1,12 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "plugin:react/recommended", "prettier"],
   "plugins": ["prettier", "react"],
   "rules": {
     "prettier/prettier": "error",
-    "no-debugger": "off",
-    "no-unused-vars": 0,
-    "react/display-name": "off",
-    "react/prop-types": "off",
-    "react/prefer-stateless-function": 0,
-    "react/jsx-filename-extension": 0,
-    "react/forbid-prop-types": [2, { "forbid": ["any"] }],
+    "import/no-unresolved": 0,
     "import/no-extraneous-dependencies": 0,
-    "prefer-destructuring": 0,
-    "global-require": 0,
-    "react/jsx-one-expression-per-line": 0,
-    "import/no-dynamic-require": 0,
-    "import/prefer-default-export": 0,
-    "jsx-a11y/href-no-hash": 0
+    "react/forbid-prop-types": 0,
+    "prefer-destructuring": 0
   },
   "parserOptions": {
     "ecmaVersion": 6,

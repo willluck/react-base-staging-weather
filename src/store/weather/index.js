@@ -4,18 +4,19 @@
  *
  * 天气数据store
  */
-import { observable, runInAction, action } from 'mobx';
+import { observable, runInAction } from 'mobx';
 import {
   fetchWeatherByIp,
   fetchWeatherByArea,
   fetchHourWeatherByArea
 } from '../../api/weather';
-import { fetchLocation } from '../../api/location';
+// import { fetchLocation } from '../../api/location';
 // import BaseData from '../common/base-data';
 
 export default class Weather {
   @observable.ref
   weatherData = {}; // 天气数据
+
   @observable.ref
   hourWeatherData = {}; // 小时天气数据
 
@@ -46,7 +47,7 @@ export default class Weather {
   /**
    * 根据当前ip获取天气情况
    */
-  fetchDefaultWeather = async withWeather => {
+  fetchDefaultWeather = async () => {
     const data = await fetchWeatherByIp();
     if (data) {
       const { showapi_res_body: content } = data || {};
