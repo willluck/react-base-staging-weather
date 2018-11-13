@@ -1,7 +1,7 @@
 # react-base-staging-weather
 **基于create-react-app1.x，基础项目集成搭建，包含路由，其中一个页面仿腾讯天气，基于react方向主流技术栈实现，脚手架create-react-app，全部技术栈：react+mobx+antd+react-router4.x+axios+webpack3.x**
 
-##更新日志
+## 更新日志
 - 2018.10 基于CRA1.X搭建
 - 2018.11.13 基于CRA2.X重构，业务无变化，主要是框架配置方面的改进
 
