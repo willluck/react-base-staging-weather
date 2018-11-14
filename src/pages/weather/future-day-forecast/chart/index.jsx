@@ -11,7 +11,7 @@ import ReactEcharts from 'echarts-for-react';
 
 class DayForecastChart extends Component {
   static propTypes = {
-    weathers: PropTypes.object.isRequired
+    weathers: PropTypes.array.isRequired
   };
 
   getOption = () => {

@@ -17,15 +17,15 @@
 `npm run build` 
 
 ## 主要技术栈
-- 脚手架create-react-app1.x 
-- react+mobx  
+- 脚手架create-react-app2.x 
+- react + mobx  
 - ui antd 
 - 路由react-router4.x
 - 数据请求axios 
 - 图表echarts-for-react
 - 其他lodash等
 - 开发代码优化eslint+prettier
-- 项目打包 webpack3.x
+- 项目打包 webpack4.x
 - 后端api：第三方api平台
 
 ## 项目适用

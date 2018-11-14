@@ -7,19 +7,21 @@ const paths = require('./paths');
 // Make sure that including paths.js after env.js will read .env variables.
 delete require.cache[require.resolve('./paths')];
 
-const NODE_ENV = process.env.NODE_ENV;
+// const NODE_ENV = process.env.NODE_ENV;
+// 设置自定义全局环境变量 系统默认的process.env.NODE_ENV是只读的，不能手动修改
+// process.env.NODE_ENV只有三个值 development test production
+// 我们实际开发中肯定需要有多个打包的环境，比如测试环境，预发布环境，正式环境等等，所以如果想要支持更多的环境变量配置，就只有手动修改这里的配置
+const NODE_ENV = process.env.RECORD_ENV
 if (!NODE_ENV) {
   throw new Error(
     'The NODE_ENV environment variable is required but was not specified.'
   );
 }
 
-const RECORD_ENV = process.env.RECORD_ENV
-
 // https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use
 var dotenvFiles = [
-  `${paths.dotenv}.${RECORD_ENV}.local`,
-  `${paths.dotenv}.${RECORD_ENV}`,
+  `${paths.dotenv}.${NODE_ENV}.local`,
+  `${paths.dotenv}.${NODE_ENV}`,
   // Don't include `.env.local` for `test` environment
   // since normally you expect tests to produce the same
   // results for everyone
