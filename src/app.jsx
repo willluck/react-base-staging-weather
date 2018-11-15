@@ -1,5 +1,5 @@
 /**
- * 最顶层组件
+ * 最顶层组件  这里可以加入mobx-react-devtools这类开发组件
  */
 import React from 'react';
 import PropTypes from 'prop-types';
