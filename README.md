@@ -1,5 +1,5 @@
 # react-base-staging-weather
-**基于create-react-app1.x，基础项目集成搭建，包含路由，其中一个页面仿腾讯天气，基于react方向主流技术栈实现，脚手架create-react-app，全部技术栈：react+mobx+antd+react-router4.x+axios+webpack3.x**
+**基于create-react-app2.x，基础项目集成搭建，包含路由，其中一个页面仿腾讯天气，基于react方向主流技术栈实现，脚手架create-react-app，全部技术栈：react+mobx+antd+react-router4.x+axios+webpack4.x**
 
 ## 更新日志
 - 2018.10 基于CRA1.X搭建
@@ -8,7 +8,7 @@
 ## usage:
 1. `git clone xxxx`
 2. `cd xxx`
-3. `cnpm i or npm i`
+3. `npm i or yarn add`
 
 ## run in dev:
 `npm start` or `yarn start`
