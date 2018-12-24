@@ -67,7 +67,7 @@ class DayForecastChart extends Component {
     return (
       <ReactEcharts
         option={option}
-        style={{ height: '330px', width: '775px' }}
+        style={{ height: '280px', width: '775px' }}
         className="react_for_echarts"
       />
     );
