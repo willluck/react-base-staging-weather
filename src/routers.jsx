@@ -35,7 +35,7 @@ import Layout from './components/layout';
 
 const MyLoadingComponent = ({ isLoading, error }) => {
   if (isLoading) {
-    return <div>Loading...</div>;
+    return null;
   }
   if (error) {
     return <div>Sorry, there was a problem loading the page.</div>;
