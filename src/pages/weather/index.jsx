@@ -4,8 +4,9 @@
  *
  * 天气主页面
  */
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { observer } from 'mobx-react';
+import { Spin } from 'antd';
 import Top from './top';
 import Overview from './now-day-forecast';
 import HourContent from './future-hour-forecast';
@@ -26,21 +27,31 @@ class Weather extends Component {
 
   render() {
     const store = this.store;
+    const { weatherDataLoading, hourWeatherDataLoading } = store;
+    const isLoading = weatherDataLoading || hourWeatherDataLoading;
     return (
       <div className={styles.main}>
-        <div className={styles.header}>
-          <section className={styles.top}>
-            <Top store={store} />
-          </section>
-          <section className={styles.overview}>
-            <Overview store={store} />
-          </section>
-        </div>
-        <HourContent store={store} />
-        <div className={styles.detail}>
-          <DayForecast store={store} />
-          <IndexContent store={store} />
-        </div>
+        {isLoading ? (
+          <div className={styles.loading}>
+            <Spin size="large" />
+          </div>
+        ) : (
+          <Fragment>
+            <div className={styles.header}>
+              <section className={styles.top}>
+                <Top store={store} />
+              </section>
+              <section className={styles.overview}>
+                <Overview store={store} />
+              </section>
+            </div>
+            <HourContent store={store} />
+            <div className={styles.detail}>
+              <DayForecast store={store} />
+              <IndexContent store={store} />
+            </div>
+          </Fragment>
+        )}
       </div>
     );
   }
