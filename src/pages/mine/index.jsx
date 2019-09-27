@@ -7,8 +7,6 @@
 import React from 'react';
 import styles from './index.less';
 
-const Mine = () => {
-  return <div className={styles.mainContent}>我的</div>;
-};
+const Mine = () => <div className={styles.mainContent}>我的</div>;
 
 export default Mine;
