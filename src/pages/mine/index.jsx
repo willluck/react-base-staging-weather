@@ -5,7 +5,10 @@
  * 我的内容管理
  */
 import React from 'react';
+import styles from './index.less';
 
-const Mine = () => <div>Mine</div>;
+const Mine = () => {
+  return <div className={styles.mainContent}>我的</div>;
+};
 
 export default Mine;

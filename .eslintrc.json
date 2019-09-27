@@ -6,7 +6,9 @@
     "import/no-unresolved": 0,
     "import/no-extraneous-dependencies": 0,
     "react/forbid-prop-types": 0,
-    "prefer-destructuring": 0
+    "prefer-destructuring": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/prop-types": 0
   },
   "parserOptions": {
     "ecmaVersion": 6,

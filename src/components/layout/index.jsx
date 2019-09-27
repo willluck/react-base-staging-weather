@@ -42,7 +42,7 @@ class RecordLayout extends Component {
     return (
       <Layout className={styles.layout}>
         <Header>
-          {/* <div className={styles.logo} /> */}
+          <div className={styles.logo} />
           <Menu
             theme="dark"
             mode="horizontal"
