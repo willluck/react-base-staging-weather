@@ -51,10 +51,10 @@ class RecordLayout extends Component {
             style={{ lineHeight: '64px' }}
             onClick={this.onMenuClick}
           >
-            <Menu.Item key="weather">天气</Menu.Item>
-            <Menu.Item key="mine">我的</Menu.Item>
-            <Menu.Item key="diary">日志</Menu.Item>
-            <Menu.Item key="photograph">照片</Menu.Item>
+            <Menu.Item key="weather">天气预报DEMO</Menu.Item>
+            <Menu.Item key="mine">我的DEMO</Menu.Item>
+            <Menu.Item key="diary">日志DEMO</Menu.Item>
+            <Menu.Item key="photograph">照片DEMO</Menu.Item>
           </Menu>
         </Header>
         <Content className={styles.content}>{children}</Content>
