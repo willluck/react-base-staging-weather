@@ -4,7 +4,7 @@
  *
  * 天气主页面
  */
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import { Spin } from 'antd';
 import Top from './top';
