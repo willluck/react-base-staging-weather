@@ -31,27 +31,21 @@ class Weather extends Component {
     const isLoading = weatherDataLoading || hourWeatherDataLoading;
     return (
       <div className={styles.main}>
-        {isLoading ? (
-          <div className={styles.loading}>
-            <Spin size="large" />
+        <Spin size="large" spinning={isLoading}>
+          <div className={styles.header}>
+            <section className={styles.top}>
+              <Top store={store} />
+            </section>
+            <section className={styles.overview}>
+              <Overview store={store} />
+            </section>
           </div>
-        ) : (
-          <Fragment>
-            <div className={styles.header}>
-              <section className={styles.top}>
-                <Top store={store} />
-              </section>
-              <section className={styles.overview}>
-                <Overview store={store} />
-              </section>
-            </div>
-            <HourContent store={store} />
-            <div className={styles.detail}>
-              <DayForecast store={store} />
-              <IndexContent store={store} />
-            </div>
-          </Fragment>
-        )}
+          <HourContent store={store} />
+          <div className={styles.detail}>
+            <DayForecast store={store} />
+            <IndexContent store={store} />
+          </div>
+        </Spin>
       </div>
     );
   }

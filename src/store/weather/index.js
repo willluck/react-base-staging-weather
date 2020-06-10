@@ -5,6 +5,7 @@
  * 天气数据store
  */
 import { observable, runInAction, action } from 'mobx';
+import { message } from 'antd';
 import {
   fetchWeatherByIp,
   fetchWeatherByArea,
@@ -46,9 +47,16 @@ export default class Weather {
    * 处理城市id
    */
   getAreaidFetchHourData = data => {
-    const { cityInfo } = data || {};
+    const { cityInfo, remark } = data || {};
     const { c1: areaid } = cityInfo || {};
-    this.fetchHourWeather({ areaid });
+    // 如果有areaid，请求小时数据
+    if (areaid) {
+      this.fetchHourWeather({ areaid });
+    } else {
+      message.error(remark || '当前地区信息无法查询');
+      // 直接请求当前默认ip地址天气信息
+      this.fetchDefaultWeather();
+    }
   };
 
   /**

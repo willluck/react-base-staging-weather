@@ -41,8 +41,8 @@ class DayForecast extends Component {
 
   // 截取当前日期
   getDay = date => {
-    const month = date.slice(-4, -2);
-    const day = date.slice(-2);
+    const month = date ? date.slice(-4, -2) : '--';
+    const day = date ? date.slice(-2) : '--';
     return `${month}月${day}日`;
   };
 
