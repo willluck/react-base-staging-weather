@@ -11,8 +11,6 @@ import {
   fetchWeatherByArea,
   fetchHourWeatherByArea
 } from '../../api/weather';
-// import { fetchLocation } from '../../api/location';
-// import BaseData from '../common/base-data';
 
 export default class Weather {
   @observable.ref
@@ -60,21 +58,23 @@ export default class Weather {
   };
 
   /**
-   * 根据当前ip获取天气情况
+   * 根据当前ip获取天气情
    */
   @action
   fetchDefaultWeather = async () => {
     this.weatherDataLoading = true;
     const data = await fetchWeatherByIp();
-    if (data) {
-      const { showapi_res_body: content } = data || {};
+    const { showapi_res_body: content } = data || {};
+    const { ret_code: resCode } = content || {};
+    // 通过IP查询成功
+    if (resCode === 0) {
       this.getAreaidFetchHourData(content);
       runInAction('get IP weatherData success', () => {
         this.weatherData = content;
-        this.weatherDataLoading = false;
       });
     }
-    return data;
+    this.weatherDataLoading = false;
+    return content;
   };
 
   /**
