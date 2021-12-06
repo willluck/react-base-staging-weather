@@ -6,10 +6,12 @@ import styles from './index.less';
 
 const { Header, Content, Footer } = Layout;
 
-const beianSrc = require('../../resource/beianIcon.png');
+const referenceSrc = require('../../resource/beianIcon.png');
 
-const beianLink =
+const referenceLink =
   'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51011302000068';
+
+const MIITLink = 'https://beian.miit.gov.cn/';
 
 class RecordLayout extends Component {
   static propTypes = {
@@ -61,12 +63,12 @@ class RecordLayout extends Component {
         <Footer className={styles.footer}>
           <p> Copyright willGHY All Rights Reserved</p>
           <div className={styles.icpContent}>
-            <span>蜀ICP备19016145号</span>
-            <span className={styles.email}>邮箱：390816673@qq.com</span>
+            <a href={MIITLink}>蜀ICP备19016145号</a>
+            <span className={styles.email}>邮箱：willghy@qq.com</span>
           </div>
           <div className={styles.beianContent}>
-            <a href={beianLink} className={styles.beianDetail}>
-              <img src={beianSrc} alt="" />
+            <a href={referenceLink} className={styles.beianDetail}>
+              <img src={referenceSrc} alt="" />
               <span>川公网安备 51011302000068号</span>
             </a>
           </div>
